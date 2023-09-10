@@ -13,3 +13,7 @@ and in tailwind.config.ts,
   ##tailwind-merge solved
   i didn't commit npm run dev not running
   copy that
+
+chow3-==>
+
+it too not working coppyy that...
