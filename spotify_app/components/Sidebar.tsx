@@ -3,6 +3,7 @@ import { BuildingLibraryIcon, HeartIcon, HomeIcon, MagnifyingGlassIcon, PlusCirc
 const Sidebar = () => {
   return (
     <div className="text-gray-500 p-5 text-sm border-r border-gray-900">
+      <div className="space-y-4">
         <div>
           <button className="flex items-center space-x-2 hover:text-white">
             <HomeIcon className="w-5 h-5"/>
@@ -40,6 +41,18 @@ const Sidebar = () => {
             <p>Your Episodes</p>
           </button>
         </div>
+        <hr className="border-t-[0.5px] border-gray-900"/>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+        <p className="cursor-pointer hover:text-white">Playlist name...</p>
+      </div>
     </div>
   )
 }
