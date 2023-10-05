@@ -5,9 +5,13 @@ import SpotifyProvider from "next-auth/providers/spotify"
 export default NextAuth({
     providers: [
         SpotifyProvider({
-            clientId: "c442271d70e34e2b8c4fdd6b27c72df9",
-            clientSecret: "f1600a4312714d45a90c6e1e8edf6715",
-            authorization: LOGIN_URL
+            clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+            clientSecret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+            authorization: LOGIN_URL,
         })
     ],
+    secret:process.env.JWT_SECRET,
+    pages:{
+        signIn:'/login'
+    }
 })
