@@ -9,7 +9,7 @@ export default function Home() {
   const [tracks, setTracks] = useState([]);
   const [search, setSearch] = useState("");
   const resultOffset = 20;
-  const endpoint = "https://v1.nocodeapi.com/chowdri/spotify/WZfWPFSZvGATTKUq/search";
+  const endpoint = "https://v1.nocodeapi.com/chow/spotify/SvfOXBxbPseLrAeQ/search";
 
   useEffect(() => {
     const fetchMusic = async () => {
