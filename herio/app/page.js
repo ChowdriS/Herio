@@ -8,6 +8,7 @@ import SpotifyPlayer from 'react-spotify-web-playback';
 export default function Home() {
   const [tracks, setTracks] = useState([]);
   const [search, setSearch] = useState("");
+  const [flag, setFlag] = useState(false);
   const resultOffset = 20;
   const endpoint = "https://v1.nocodeapi.com/chow/spotify/SvfOXBxbPseLrAeQ/search";
 
@@ -23,6 +24,7 @@ export default function Home() {
         }
 
         const jsonData = await response.json();
+        console.log(jsonData);
 
         setTracks(jsonData.tracks.items);
         console.log(tracks);
@@ -32,10 +34,13 @@ export default function Home() {
     };
 
     fetchMusic();
-  }, [search]);
+  }, [flag]);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
+  };
+  const handleClick = (event) => {
+    setFlag(event.target.value);
   };
 
   return (
@@ -49,7 +54,7 @@ export default function Home() {
             placeholder="Search for the Song"
             onChange={handleChange}
           />
-          <button
+          <button onClick={handleClick}
             className="w-32 h-8 text-white border border-solid
         border-white hover:bg-white italic hover:text-black rounded-lg"
           >
